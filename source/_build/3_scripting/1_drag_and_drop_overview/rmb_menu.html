@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Right Mouse Button Menu Options</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/1_drag_and_drop_overview/rmb_menu.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Frmb_menu.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Frmb_menu.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>Right Mouse Button Menu Options</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>When working on your DnD™ code, you can click the right mouse
+button <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> on the action, on the workspace, or on
+the text in the shortlist on the left to open up the Right Mouse
+button menu: <img class="center" src="images/dnd_rmb_menu.png" alt=
+"DnD™ RMB Menu"></p>
+
+<p>This menu has the following options:</p>
+
+<ul>
+<li><b>Cut / Copy / Paste</b>: This will permit you cut, copy or
+paste any action that is selected in the workspace. Note that you
+can use <img style="vertical-align:middle" src=
+"../../images/icon_shift.png"> + <img style="vertical-align:middle"
+src="../../images/icon_lmb.png"> outside of the actions and drag,
+or use <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+individual actions, to select more than one and apply the command
+to all of them.<br>
+<br></li>
+
+<li><b>Comment / Remove Comment</b>: This option permits you to add
+and remove comments from your DnD™ code blocks. When you select
+<b>Comment</b>, text editor will be opened to the right of the
+selected DnD™ block, and there you can add any text you require,
+whether it be a reminder to change something, or a helpful comment
+for a tutorial, or even instructions for your teammates:<br>
+<br>
+<img class="center" src="images/dnd_add_comment.gif" alt=
+"DnD™ Comments"><br>
+Once you have added the comment, you can click on it and drag it to
+position it vertically and horizontally - although only to the
+right of the parent node - and collapsing the DnD™ node will also
+collapse the comment and show a summary of its contents (in which
+case it cannot be repositioned). If the comment is no longer
+required, then you can either delete all the text in the comment,
+or use the <b>Remove Comment</b> option from the menu. Note that
+when you copy a node, the comment will be copied along with it, and
+if you convert the node from DnD™ to GML, then comment will be
+preserved and added to the GML that is created, as illustrated in
+the image below: <img class="center" src=
+"images/dnd_comments_in_gml.png" alt="DnD™ Comments In GML"> As
+mentioned above, a comment can only be applied to a single node,
+but you can expand it to cover multiple nodes by simply adding in
+line breaks to extend it - although this may require you to
+re-position the comment to prevent overlaps with subsequent nodes:
+<img class="center" src="images/dnd_comments_extended.png" alt=
+"DnD™ Comment Over Multiple Nodes"> Once a comment has been added,
+you can select the "Comment" option again from the RMB menu or you
+can double click <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> on it to enable editing.</li>
+
+<li style="list-style: none"><br>
+<br>
+</li>
+
+<li><b>Disable / Enable</b>: These commands can be used disable or
+enable the action (or actions) selected. When an action is
+disabled, it is still visible in the workspace but it <i>will not
+run</i> when you compile the game. In this way you can add/remove
+actions for testing and debugging. The image below shows some DnD™
+code with actions disabled: <img class="center" src=
+"images/dnd_disable_actions.png" alt="DnD™ Disable Actions"> You
+can see that the actions "<tt>If Score</tt>" and "<tt>Go To Next
+Room</tt>" have been disabled - they have been grayed out, visually
+- and so they will be skipped when the game is tested or
+compiled.<br>
+<br></li>
+
+<li><b>Toggle Breakpoint</b>: This command will toggle a
+<b>breakpoint</b> on or off for the selected action. A breakpoint
+is simply a point in the DnD™ code where the debugger should stop
+when the game is being run in <a href=
+"../../2_interface/2_extras/debugging.html">Debug Mode</a>. An
+action with a breakpoint assigned to it will be highlighted, as
+shown in the image below (the "<tt>If Health</tt>" action has been
+set as a breakpoint): <img class="center" src=
+"images/dnd_togglebreakpoint.png" alt="DnD™ Breakpoint"></li>
+
+<li><b>Delete All Breakpoints</b>: With this command you can remove
+all breakpoints form the DnD™ code.<br>
+<br></li>
+
+<li><b>Collapse All / Expand All</b>: DnD™ actions can be either
+collapsed or expanded, where a collapsed action will simply show
+the name of the action but not any of the internal values thus
+maximising the available space for the workspace. For example:
+<img class="center" src="images/dnd_collapseactions.png" alt=
+"DnD™ Collapsed Actions"> As you can see, the actions take up much
+less space, and you can still see what they do from the short
+description given to the right. You can select the "Expand All"
+option to undo this for every node in the workspace.<br>
+<br></li>
+
+<li><b>Reset Layout</b>: This will reset the DnD™ workspace,
+setting the zoom level to 100%, focusing on the currently selected
+action, and expanding any (and all) collapsed actions too.<br>
+<br></li>
+
+<li><b>Live Preview</b>: When you select this option, you will
+enable or disable the DnD™ to GML (GameMaker Language) code preview
+window. This is explained in more detail on the page <a href=
+"changing_dnd.html">Changing DnD™ To Code</a>.<br>
+<br></li>
+
+<li><b>Convert To GML</b>: This will convert all your actions in
+the current event to GML (GameMaker Language) code. <i>Be very
+careful with this</i> as you cannot convert GML back into the DnD™
+actions that it was created from. You <i>can</i> convert the event
+back to a DnD™ event from code, but any code will simply be wrapped
+in an <a href=
+"../2_drag_and_drop_reference/common_actions/execute_code.html"><tt>
+Execute Code</tt></a> action. This is explained in more detail on
+the page <a href="changing_dnd.html">Changing DnD™ To Code</a>.<br>
+<br></li>
+
+<li><b>Window</b>: This section opens the following sub-menu:
+<img class="center" src="images/dnd_windowoptions.png" alt=
+"DnD™ Window Options"> The menu items available here are:<br>
+<br>
+
+<ul>
+<li><b>Go To Object</b>: This will pan the workspace to the object
+that is calling the event</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Open Inherited Event</b>: This option is only available if
+the object being edited is a <i>child</i> of a parent object, and
+will open the event being edited of the parent object and pan the
+workspace to it.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Single Pane / 2 Columns / 3 Columns</b>: These options can
+be used to split the current worskspace into 1, 2 or 3 different
+"panes". Each pane is a seperate workspace that can have scripts or
+events dragged onto them so you can edit and compare 2 or more DnD™
+code blocks at a time. The image below shows two scripts in one
+window shown in their own workspace pane: <img class="center" src=
+"images/dnd_splitpanewindow.png" alt=
+"DnD™ Split Workspace Panes"></li>
+</ul></li>
+</ul>
+
+<p>The following two options are only available when the RMB menu
+is opened on a DnD™ node:</p>
+
+<ul>
+<li><b>Pan</b>: When selecting this option on any node, the
+workspace will pan to ring that node to the center.<br>
+<br></li>
+
+<li><b>Show Help...</b>: Selecting this will open the Manual in a
+new workspace on the page relevant to the node that has been
+selected. You can also achieve the same results by using
+<img style="vertical-align:middle" src="../../images/icon_f1.png">
+on the node.</li>
+</ul>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">Drag And Drop
+Overview</a></div>
+
+<div style="float:right">Next: <a href=
+"applying_actions.html">Applying Actions To Other
+Instances</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

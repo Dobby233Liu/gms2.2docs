@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>surface_depth_disable</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/surfaces/surface_depth_disable.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsurfaces%2Fsurface_depth_disable.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsurfaces%2Fsurface_depth_disable.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>surface_depth_disable</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This function disables the automatic depth buffer generation for
+<i>all</i> surfaces that are created after it has been disabled.
+Normally all surfaces have depth buffers so if you draw 3D objects
+to them then it'll sort them properly by depth in order to maintain
+functional parity between rendering to surfaces and rendering to
+the back buffer, however allocating depth buffers essentially
+doubles the amount of memory required for surfaces, which could be
+an excessive and unnecessary overhead especially if your game is
+very memory intensive, and for 2D games they aren't generally
+required.</p>
+
+<p>To use this function you would call it <i>before</i> creating a
+surface, and then you can enable it again after (if required). All
+surfaces created when the depth buffer is disabled will no longer
+use a depth buffer when being drawn to, this results in the things
+being drawn to the surface having parity of depth. The images below
+illustrate this in practice: <img class="center" src=
+"surface_depth_buffer.png" alt="Surface Depth Buffer"></p>
+
+<p>In the above image, we are drawing a rectangle and a triangle
+using a vertex buffer in 3D. The coordinates for the red triangle
+places it behind the green rectangle, but the code for drawing the
+triangle is called <i>after</i> the code for the rectangle, and
+when the depth buffer is enabled, the triangle is still drawn
+behind the rectangle as the 3D depth is being respected. However
+when we disable the depth buffer for the surface, only the code
+order is respected and so the triangle is drawn over the
+rectangle.</p>
+
+<div class="note"><b>NOTE</b>: To properly preserve depth in 3D
+when using surfaces, not only should you have the depth buffer
+enabled, but you should also have z-writing and z-testing enabled.
+See the functions <a href=
+"../gpu/gpu_set_ztestenable.html"><tt>gpu_set_ztestenable()</tt></a>
+and <a href=
+"../gpu/gpu_set_zwriteenable.html"><tt>gpu_set_zwriteenable()</tt></a>
+for more information.</div>
+
+<div class="note"><b>NOTE</b>: If your game is 100% 2D or you know
+that you don't need a surface depth buffer, then it should be fine
+to simply call this function once at the start of the game to
+disable the buffer.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
+
+<p class="code">surface_depth_disable(disable);</p>
+
+<div class="param">
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>disable</td>
+<td>If set to <tt>true</tt> the depth buffer will be disabled for
+created surfaces.</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
+
+<p class="code">var _depth_setting =
+surface_get_depth_disable();<br>
+surface_depth_disable(false);<br>
+surface_with_depth = surface_create(room_width, room_height);<br>
+surface_depth_disable(true);<br>
+surface_without_depth = surface_create(room_width,
+room_height);<br>
+surface_depth_disable(_depth_setting);<br></p>
+
+<blockquote>
+<p>The above code stores the current depth buffer setting in a
+variable and then creates two surfaces, one with depth buffering
+enabled and one without, before restoring the original setting
+again.</p>
+</blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href=
+"index.html">Surfaces</a></div>
+
+<div style="float:right">Next: <a href=
+"surface_get_height.html">surface_get_height</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

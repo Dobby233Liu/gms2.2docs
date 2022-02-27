@@ -1,0 +1,637 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>UWP and XBox Live</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/uwp and xbox live/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox%20live%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox%20live%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>UWP and XBox Live</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>This section outlines the functions specifically for use when
+targeting the UWP target platform. The initial set of functions are
+for controlling the general game behaviour when creating a UWP
+app:</p>
+
+<blockquote>
+<ul>
+<li><a href="uwp_suspend.html">uwp_suspend</a><br>
+</li>
+
+<li><a href="uwp_is_suspending.html">uwp_is_suspending</a><br>
+</li>
+
+<li><a href="uwp_is_constrained.html">uwp_is_constrained</a><br>
+</li>
+
+<li><a href="uwp_was_terminated.html">uwp_was_terminated</a><br>
+</li>
+
+<li><a href=
+"uwp_was_closed_by_user.html">uwp_was_closed_by_user</a><br>
+</li>
+
+<li><a href="uwp_show_help.html">uwp_show_help</a><br>
+</li>
+
+<li><a href=
+"uwp_license_trial_version.html">uwp_license_trial_version</a><br>
+</li>
+
+<li><a href=
+"uwp_license_trial_user.html">uwp_license_trial_user</a><br>
+</li>
+
+<li><a href=
+"uwp_license_trial_time_remaining.html">uwp_license_trial_time_remaining</a><br>
+
+</li>
+
+<li><a href="uwp_check_privilege.html">uwp_check_privilege</a><br>
+</li>
+</ul>
+</blockquote>
+
+<p>UWP also permits you to create games for the XBox One platform
+using the XBox Live API using the following functions. These
+functions are require you to have checked the <b>Enable XBox
+Live</b> option in the <a href=
+"../../../2_interface/3_settings/game_options/options_windowsuwp.html">
+UWP Game Options</a>.</p>
+
+<p>Some of these functions require the user to be signed-in to XBox
+Live, which <i>GameMaker Studio 2</i> will try to do automatically
+when you run the project. This "silent" sign in will generate a
+<a href=
+"../../../2_interface/1_editors/events/async_events.html">System
+Asynchronous Event</a> which can the be checked to see if it was
+successful or not before proceeding. Note that unlike the Xbox One
+Console export, the UWP export for XBox Live only permits one user
+to be signed-in at a time.</p>
+
+<p>The following functions exist for you to use with XBox Live in
+your projects:</p>
+
+<blockquote>
+<ul>
+<li><a href=
+"xboxlive_user_is_signed_in.html">xboxlive_user_is_signed_in</a>
+</li>
+
+<li><a href=
+"xboxlive_user_is_signing_in.html">xboxlive_user_is_signing_in</a>
+</li>
+
+<li><a href=
+"xboxlive_gamertag_for_user.html">xboxlive_gamertag_for_user</a>
+</li>
+
+<li><a href=
+"xboxlive_show_account_picker.html">xboxlive_show_account_picker</a>
+</li>
+</ul>
+</blockquote>
+
+<blockquote><label class="collapse" for="a">Users And
+Accounts</label> <input id="a" type="checkbox">
+<div class="index_list">
+<p>The Xbox One allows multiple users to sign in to a console
+simultaneously. Each user has a specific controller associated with
+them and any save game data is also user-specific. To make the most
+of this system, <i>GameMaker Studio 2</i> introduces a number of
+XBox One only functions related to the association between
+controllers and users, permitting you to query information about
+the user and also controlling how save data is handled on a
+per-user basis. You can find further developer information about
+this system from the official white paper on the <a href=
+"https://developer.xboxlive.com/en-us/platform/development/education/Documents/Users,%20Controllers,%20and%20Pairing%20-%20Identity%20on%20Xbox%20One.aspx"
+target="_blank">Microsoft developer site</a>.</p>
+
+<div class="note"><b>NOTE</b>: Note that the User ID is unique to
+each individual and is perpetuated across different consoles, so if
+the same user signs in on two different devices this User ID will
+be the same.</div>
+
+<p>The following functions exist for you to use with XBox Live
+accounts:</p>
+
+<ul>
+<li><a href=
+"xboxlive_get_user_count.html">xboxlive_get_user_count</a><br>
+</li>
+
+<li><a href="xboxlive_get_user.html">xboxlive_get_user</a><br>
+</li>
+
+<li><a href=
+"xboxlive_get_activating_user.html">xboxlive_get_activating_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_user_is_guest.html">xboxlive_user_is_guest</a><br>
+</li>
+
+<li><a href=
+"xboxlive_user_is_signed_in.html">xboxlive_user_is_signed_in</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_user_is_signing_in.html">xboxlive_user_is_signing_in</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_user_is_active.html">xboxlive_user_is_active</a><br>
+</li>
+
+<li><a href=
+"xboxlive_user_is_remote.html">xboxlive_user_is_remote</a>
+</li>
+
+<li><a href=
+"xboxlive_user_id_for_user.html">xboxlive_user_id_for_user</a><br>
+</li>
+
+<li><a href=
+"xboxlive_sponsor_for_user.html">xboxlive_sponsor_for_user</a>
+</li>
+
+<li><a href=
+"xboxlive_set_rich_presence.html">xboxlive_set_rich_presence</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_gamedisplayname_for_user.html">xboxlive_gamedisplayname_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_user_for_pad.html">xboxlive_user_for_pad</a><br>
+</li>
+
+<li><a href=
+"xboxlive_pad_for_user.html">xboxlive_pad_for_user</a><br>
+</li>
+
+<li><a href=
+"xboxlive_pad_count_for_user.html">xboxlive_pad_count_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_show_account_picker.html">xboxlive_show_account_picker</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_agegroup_for_user.html">xboxlive_agegroup_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_gamerscore_for_user.html">xboxlive_gamerscore_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_show_profile_card_for_user.html">xboxlive_show_profile_card_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_reputation_for_user.html">xboxlive_reputation_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_sprite_add_from_gamerpicture.html">xboxlive_sprite_add_from_gamerpicture</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_gamertag_for_user.html">xboxlive_gamertag_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_generate_player_session_id.html">xboxlive_generate_player_session_id</a><br>
+
+</li>
+</ul>
+</div>
+<br>
+<label class="collapse" for="b">Save Data</label> <input id="b"
+type="checkbox">
+<div class="index_list">
+<p>The following functions are specifically to do with save data.
+While the save data related to player progress must always be
+associated with a particular user, you can save generic data to the
+"machine storage" area to by providing the value -1 as the user
+argument. This area is title-specific, but not associated with a
+particular user.</p>
+
+<div class="note"><b>NOTE</b>: No saved file can be larger than 16
+megs!</div>
+
+<p>The following functions are for dealing with Xbox Live save
+data:</p>
+
+<ul>
+<li><a href=
+"xboxlive_set_savedata_user.html">xboxlive_set_savedata_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_get_savedata_user.html">xboxlive_get_savedata_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_get_file_error.html">xboxlive_get_file_error</a><br>
+</li>
+</ul>
+</div>
+<br>
+<label class="collapse" for="c">Stats</label> <input id="c" type=
+"checkbox">
+<div class="index_list">
+<p>Xbox One Stats (achievements and leaderboards) are functional
+when using UWP and have some special functions for dealing with
+them, although they also use some of the standard built-in
+functions for leaderboards. The 2017 Xbox Live stats system
+simplifies the whole procedure for making achievements and
+leaderboards, permitting you to create and use the different
+systems from within <i>GameMaker Studio 2</i> . The main difference
+between the 2017 system and previous systems is that you no longer
+have to define all of the stats you use in game on XDP, and you do
+not need to tie achievement unlocking to a stat event/rule either
+(as they are unlocked by a direct function call instead).</p>
+
+<div class="note"><b>NOTE</b>: Although there is no manifest file
+required with this system, you can still set up some stats on
+XDP/MDC. Ones setup there will be considered <b>featured stats</b>
+which means you can have global leaderboards and the stats turn up
+on the games dashboard page. For more information, please see the
+MS article <a href=
+"https://docs.microsoft.com/en-us/windows/uwp/xbox-live/leaderboards-and-stats-2017/player-stats-configure-2017"
+target="_blank">Configuring Featured Stats or Leaderboards on
+Universal Dev Center with Data Platform 2017</a>.</div>
+
+<p>Before calling any of the stats functions listed below, you must
+make sure that the user is logged in (see the User functions listed
+above) then setup the stats system and add the user to it using
+these functions:</p>
+
+<ul>
+<li><a href=
+"xboxlive_stats_setup.html">xboxlive_stats_setup</a><br>
+</li>
+
+<li><a href=
+"xboxlive_stats_add_user.html">xboxlive_stats_add_user</a>
+</li>
+</ul>
+
+<p>The rest of the 2017 stat functions are as follows:</p>
+
+<ul>
+<li><a href=
+"xboxlive_stats_remove_user.html">xboxlive_stats_remove_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_flush_user.html">xboxlive_stats_flush_user</a><br>
+</li>
+
+<li><a href=
+"xboxlive_stats_set_stat_real.html">xboxlive_stats_set_stat_real</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_set_stat_int.html">xboxlive_stats_set_stat_int</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_set_stat_string.html">xboxlive_stats_set_stat_string</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_delete_stat.html">xboxlive_stats_delete_stat</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_get_stat_names.html">xboxlive_stats_get_stat_names</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_get_stat.html">xboxlive_stats_get_stat</a><br>
+</li>
+
+<li><a href=
+"xboxlive_stats_get_leaderboard.html">xboxlive_stats_get_leaderboard</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_stats_get_social_leaderboard.html">xboxlive_stats_get_social_leaderboard</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_achievements_set_progress.html">xboxlive_achievements_set_progress</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_get_stats_for_user.html">xboxlive_get_stats_for_user</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_read_player_leaderboard.html">xboxlive_read_player_leaderboard</a><br>
+
+</li>
+
+<li><a href="xboxlive_fire_event.html">xboxlive_fire_event</a><br>
+</li>
+</ul>
+</div>
+<br>
+<label class="collapse" for="d">Match Making</label> <input id="d"
+type="checkbox">
+<div class="index_list">
+<p>Matchmaking (multiplayer) for Xbox Live and UWP requires a bit
+of configuration, partly via a configuration file which defines
+what network connections you are going to use, and partly via setup
+of session templates and matchmaking hoppers on the Xbox Developer
+Portal. <i>GameMaker Studio 2</i> supports this through the use of
+the UWP target and permits you to do the following:</p>
+
+<ul>
+<li>Create a multiplayer session</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Find (and/or join) a multiplayer session</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Be notified when relevant players join or leave a session, as
+well as receive their network connection details</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Be notified when the session host migrates to a different
+user</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Get a list of users in the session</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Leave a session</li>
+
+<li style="list-style: none"><br>
+</li>
+</ul>
+
+<p>Xbox Live network connectivity relies on something called a
+<b>Secure Device Association</b>, which is basically a contract
+defining exactly how the device connects to other devices and what
+sort of data it is able to communicate using that connection. These
+are configured using a file which you need to include in your
+project. You can find an example of this file <a href=
+"http://help.yoyogames.com/attachments/token/aF6pHTwVLjGal1JOQbV3NpyZg/?name=test_xbox_network_manifest.man"
+target="_blank">here</a>. The main important points in the file are
+the protocol and port numbers for each socket description, as these
+must match what you actually set up in code.</p>
+
+<p>Once you have created this network manifest file, it should be
+added to the project as an <a href=
+"../../../2_interface/1_editors/included_files.html">included
+file</a>. Then, inside the UWP Game Options, in the Xbox One
+General tab, it should be selected in the "Included File for
+Network Config Manifest" combo box.</p>
+
+<p>To create a multiplayer session, you need to specify what
+<b>Session Template</b> is going to be used. These session
+templates are defined on the XDP, but an example is shown
+below:</p>
+
+<p class="code">Session Name: MatchSession<br>
+Contract Version: 107<br>
+Session Template (JSON text):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"constants": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"system": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"version":
+1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"maxMembersCount":
+12,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"capabilities":
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"memberInitialization":
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"externalEvaluation":
+false,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"membersNeededToStart":
+1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"custom": {}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+
+<p>A description of the fields can be found in "Session Overview"
+in the XDK help file. Note that we currently don't support setting
+session parameters dynamically from <i>GameMaker Studio 2</i>.</p>
+
+<p>Along with the session template, a matchmaking hopper must also
+be set up to allow the session to be found (this is also done on
+the XDP). Hoppers are used to define rules which are used when
+matching players. As with session parameters, we don't currently
+support setting hopper parameters dynamically from GameMaker:
+Studio. See the "SmartMatch Matchmaking Configuration" section in
+the XDK help file for further details.</p>
+
+<p>The following functions are available for XboxLive matchmaking
+(note that you will also need to use the <i>GameMaker Studio 2</i>
+<a href="../networking/index.html">Networking Functions</a> for the
+connections etc...):</p>
+
+<ul>
+<li><a href=
+"xboxlive_matchmaking_start.html">xboxlive_matchmaking_start</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_stop.html">xboxlive_matchmaking_stop</a><br>
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_create.html">xboxlive_matchmaking_create</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_find.html">xboxlive_matchmaking_find</a><br>
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_session_get_users.html">xboxlive_matchmaking_session_get_users</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_join_session.html">xboxlive_matchmaking_join_session</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_session_leave.html">xboxlive_matchmaking_session_leave</a><br>
+
+</li>
+</ul>
+
+<p><i>GameMaker Studio 2</i> provides an extra set of matchmaking
+functions for you to use to invite other players on the network to
+join a session, or for you to accept an invitation to join someone
+else's session. The functions available are:</p>
+
+<ul>
+<li><a href=
+"xboxlive_matchmaking_send_invites.html">xboxlive_matchmaking_send_invites</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_set_joinable_session.html">xboxlive_matchmaking_set_joinable_session</a><br>
+
+</li>
+
+<li><a href=
+"xboxlive_matchmaking_join_invite.html">xboxlive_matchmaking_join_invite</a><br>
+
+</li>
+</ul>
+
+<p>When the player accepts an invitation from another player, one
+of two things happens:</p>
+
+<ul>
+<li>1) If your game is currently running, you will receive a
+<a href=
+"../../../2_interface/1_editors/events/async_events.html">Social
+Asynchronous Event</a> with async_load DS map containing the
+following keys/values:<br>
+<br>
+
+<ul>
+<li>"id" - This will be set to MATCHMAKING_INVITATION.</li>
+
+<li>"invitation_id" - This is the unique session ID value</li>
+
+<li>"invitation_host" - This is the unique session ID value for the
+session host</li>
+</ul>
+You should save the ID and Host values then leave any sessions you
+need to, and call the function
+<tt>xboxlive_matchmaking_join_invite()</tt>, passing in as
+arguments the invitation ID and invitation host values in a Step
+event.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>2) If your game is not currently running, it will be started by
+the OS. You will receive the same type of <b>Social Asynchronous
+Event</b> with the same keys set as those listed above. Save them
+to variables, then connect to Xbox Live matchmaking and finally
+call <tt>xboxlive_matchmaking_join_invite()</tt>.</li>
+</ul>
+
+<p>Once you have called <tt>xboxlive_matchmaking_join_invite()</tt>
+the user will attempt to join the session and you will receive
+Asynchronous Social Events as if you had called
+<tt>xboxlive_matchmaking_find()</tt> on this session.</p>
+</div>
+<br>
+
+<p><br>
+</p></blockquote>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href=
+"../index.html">Reference</a></div>
+
+<div style="float:right">Next: <a href=
+"../miscellaneous/index.html">Miscellaneous Functions</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

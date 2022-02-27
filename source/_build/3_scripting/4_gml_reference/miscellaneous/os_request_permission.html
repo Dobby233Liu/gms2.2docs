@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>os_request_permission</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/miscellaneous/os_request_permission.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fos_request_permission.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fos_request_permission.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>os_request_permission</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>With this function you can request a specific permission. You
+supply the permission to request as a string using the format
+"<tt>android.permission.&lt;permission&gt;</tt>", so to request the
+<tt>RECORD_AUDIO</tt> permission (for example) you would call</p>
+
+<p class="code">
+os_request_permission("android.permission.RECORD_AUDIO");</p>
+
+<p>The function will return trigger a <a href=
+"../../../2_interface/1_editors/events/async_events.html">System
+Asynchronous Event</a> where the built in <tt>async_load</tt> DS
+map will contain the following key/value pairs:</p>
+
+<ul>
+<li>"<b>type</b>": This is the event type that was triggered and
+the value will be the string
+"<tt>permission_request_result</tt>".</li>
+
+<li>"<b>&lt;permission&gt;</b>": This will the permission requested
+by the function as a string, which will contain one of the
+following constants:
+
+<div class="compat">
+<table>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>os_permission_granted</td>
+<td>This indicates that the permission has been granted</td>
+</tr>
+
+<tr class="alt">
+<td>os_permission_denied</td>
+<td>This indicates that the permission has not been granted</td>
+</tr>
+</table>
+</div></li>
+</ul>
+
+<p>It is worth noting that the following permission are supported
+natively by <i>GameMaker Studio 2</i>, but are considered
+"dangerous" by Google and as such they <i>must</i> be explicitly
+requested (note too that some permissions can be requested using
+the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Android Game Options</a> without the need for this function):</p>
+
+<ul>
+<li><tt>android.permission.WRITE_EXTERNAL_STORAGE</tt>
+</li>
+
+<li><tt>android.permission.READ_PHONE_STATE</tt>
+</li>
+
+<li><tt>android.permission.RECORD_AUDIO</tt>
+</li>
+</ul>
+
+<p>For more information on app permissions, please see the <a href=
+"https://developer.android.com/guide/topics/permissions/overview"
+target="_blank">Android Documentation</a>.</p>
+
+<div class="note"><b>IMPORTANT!</b> This function is for the
+<b>Android</b> and <b>Amazon Fire</b> targets only.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
+
+<p class="code">os_request_permission(permission)</p>
+
+<div class="param">
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>permission</td>
+<td>The permission to request (a string)</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
+
+<p class="code">if os_type == os_android<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if
+os_check_permission("android.permission.INTERNET") ==
+os_permission_denied<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os_request_permission("android.permission.INTERNET");<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+
+<blockquote>
+<p>The above code checks the OS type and if is Android, it performs
+a check on the permissions and if the "INTERNET" permission has not
+yet been granted, it requests it.</p>
+</blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">Miscellaneous
+Functions</a></div>
+
+<div style="float:right">Next: <a href=
+"os_browser.html">os_browser</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

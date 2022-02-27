@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Skeletal Animations</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/sprites/skeletal animations/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fskeletal%20animations%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fskeletal%20animations%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>Skeletal Animations</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>The functions found in this section are <i>only</i> for use with
+sprites that have been imported from a skeletal animation file
+(like the JSON files that <b>Spine</b> exports) and can be used to
+get information about an animation asset in your game, as well as
+for setting certain properties within an animation. These functions
+can to be used along with the regular sprite functions and
+variables, permitting you to (for example) mix two skeleton
+animations using these special functions while setting the image
+scale using the normal sprite instance variables. For more
+information on the sprite instance variables see the section on
+<a href="../../instances/instance_variables/index.html">Instance
+Variables</a>.</p>
+
+<div class="note"><b>NOTE</b>: For further information on importing
+skeletal animation sprites made with Spine, please see the section
+<a href=
+"../../../../1_overview/3_additional_information/importing_non_bitmap_sprites.html">
+Importing Non-Bitmap Sprites</a>.</div>
+
+<blockquote><label class="collapse" for="a">Animation</label>
+<input id="a" type="checkbox">
+<div class="index_list">
+<p>The following functions are all related to controlling the
+skeleton animations:</p>
+
+<ol>
+<li><a href=
+"skeleton_animation_get.html">skeleton_animation_get</a>
+</li>
+
+<li><a href=
+"skeleton_animation_set.html">skeleton_animation_set</a>
+</li>
+
+<li><a href=
+"skeleton_animation_get_ext.html">skeleton_animation_get_ext</a>
+</li>
+
+<li><a href=
+"skeleton_animation_set_ext.html">skeleton_animation_set_ext</a>
+</li>
+
+<li><a href=
+"skeleton_animation_get_duration.html">skeleton_animation_get_duration</a>
+</li>
+
+<li><a href=
+"skeleton_animation_mix.html">skeleton_animation_mix</a>
+</li>
+
+<li><a href=
+"skeleton_animation_list.html">skeleton_animation_list</a>
+</li>
+
+<li><a href=
+"skeleton_animation_clear.html">skeleton_animation_clear</a>
+</li>
+
+<li><a href=
+"skeleton_animation_get_frames.html">skeleton_animation_get_frames</a>
+</li>
+
+<li><a href=
+"skeleton_animation_get_frame.html">skeleton_animation_get_frame</a>
+</li>
+
+<li><a href=
+"skeleton_animation_set_frame.html">skeleton_animation_set_frame</a>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="b">Skins</label> <input id="b" type=
+"checkbox">
+<div class="index_list">
+<p>These functions can be used to get and change the skin that a
+skeleton sprite is using:</p>
+
+<ol>
+<li><a href="skeleton_skin_get.html">skeleton_skin_get</a>
+</li>
+
+<li><a href="skeleton_skin_set.html">skeleton_skin_set</a>
+</li>
+
+<li><a href="skeleton_skin_list.html">skeleton_skin_list</a>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="c">Attachments</label> <input id="c"
+type="checkbox">
+<div class="index_list">
+<p>The following set of functions are specific to the attachments
+that a skeleton animation sprite can use:</p>
+
+<ol>
+<li><a href=
+"skeleton_attachment_get.html">skeleton_attachment_get</a>
+</li>
+
+<li><a href=
+"skeleton_attachment_set.html">skeleton_attachment_set</a>
+</li>
+
+<li><a href=
+"skeleton_attachment_create.html">skeleton_attachment_create</a>
+</li>
+
+<li><a href=
+"skeleton_attachment_create_colour.html">skeleton_attachment_create_colour</a>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="d">Bones</label> <input id="d" type=
+"checkbox">
+<div class="index_list">
+<p>These functions can be used to get the current state of the bone
+data and state for a skeleton animation, as well as to set the bone
+data and state:</p>
+
+<ol>
+<li><a href=
+"skeleton_bone_data_get.html">skeleton_bone_data_get</a>
+</li>
+
+<li><a href=
+"skeleton_bone_data_set.html">skeleton_bone_data_set</a>
+</li>
+
+<li><a href=
+"skeleton_bone_state_get.html">skeleton_bone_state_get</a>
+</li>
+
+<li><a href=
+"skeleton_bone_state_set.html">skeleton_bone_state_set</a>
+</li>
+
+<li><a href="skeleton_bone_list.html">skeleton_bone_list</a>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="f">Slots</label> <input id="f" type=
+"checkbox">
+<div class="index_list">
+<p>These functions can be used to get get the slot data for a
+sprite as well as manipulate its colour:</p>
+
+<ol>
+<li><a href="skeleton_slot_list.html">skeleton_slot_list</a>
+</li>
+
+<li><a href="skeleton_slot_data.html">skeleton_slot_data</a>
+</li>
+
+<li><a href=
+"skeleton_slot_data_instance.html">skeleton_slot_data_instance</a>
+</li>
+
+<li><a href="skeleton_find_slot.html">skeleton_find_slot</a>
+</li>
+
+<li><a href=
+"skeleton_slot_colour_set.html">skeleton_slot_colour_set</a>
+</li>
+
+<li><a href=
+"skeleton_slot_colour_get.html">skeleton_slot_colour_get</a>
+</li>
+
+<li><a href=
+"skeleton_slot_alpha_get.html">skeleton_slot_alpha_get</a>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="e">Miscellaneous</label> <input id="e"
+type="checkbox">
+<div class="index_list">
+<p>The following functions can be used to get various different
+sets of data about a skeleton animation sprite:</p>
+
+<ol>
+<li><a href="skeleton_get_minmax.html">skeleton_get_minmax</a>
+</li>
+
+<li><a href=
+"skeleton_get_num_bounds.html">skeleton_get_num_bounds</a>
+</li>
+
+<li><a href="skeleton_get_bounds.html">skeleton_get_bounds</a>
+</li>
+</ol>
+</div></blockquote>
+
+<p><br>
+You can also use various draw routines designed specifically for
+these types of sprite (apart from the regular
+<tt>draw_sprite()</tt> functions). These functions give you more
+control over what is being drawn and permit you to change animation
+specific features, such as timing and skins:</p>
+
+<blockquote>
+<ol>
+<li><a href=
+"skeleton_collision_draw_set.html">skeleton_collision_draw_set</a>
+</li>
+
+<li><a href=
+"../../drawing/sprites_and_tiles/draw_skeleton.html">draw_skeleton</a><br>
+
+</li>
+
+<li><a href=
+"../../drawing/sprites_and_tiles/draw_skeleton_collision.html">draw_skeleton_collision</a><br>
+
+</li>
+
+<li><a href=
+"../../drawing/sprites_and_tiles/draw_skeleton_time.html">draw_skeleton_time</a><br>
+
+</li>
+</ol>
+</blockquote>
+
+<p><br>
+</p>
+
+<h2>Tint Black Support</h2>
+
+<p><br>
+</p>
+
+<p>This feature allows the dark areas of Spine sprite slots to be
+tinted differently to the light areas (this is a Spine IDE feature,
+see the <b>Tint black</b> section <a href=
+"http://esotericsoftware.com/spine-attachments" target=
+"_blank">here</a> more details). Currently, in order to make use of
+this feature in <i>GameMaker Studio 2</i>, you are required to use
+a custom shader when drawing a spine sprite that uses it. This
+shader contains a global uniform variable called
+"<tt>gm_SpineTintBlackColour</tt>" which the runner fills with the
+current tint-black colour, retrieved from the Spine data
+automatically. The shader required is shown below:</p>
+
+<p>The Vertex Shader (this is the same as the default passthrough
+vertex shader)</p>
+
+<p class="code">attribute vec3 in_Position; // (x,y,z)<br>
+attribute vec4 in_Colour; // (r,g,b,a)<br>
+attribute vec2 in_TextureCoord; // (u,v)<br>
+<br>
+varying vec2 v_vTexcoord;<br>
+varying vec4 v_vColour;<br>
+<br>
+void main()<br>
+{<br>
+vec4 object_space_pos = vec4( in_Position.x, in_Position.y,
+in_Position.z, 1.0);<br>
+gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] *
+object_space_pos;<br>
+v_vColour = in_Colour;<br>
+v_vTexcoord = in_TextureCoord;<br>
+}<br></p>
+
+<p><br>
+The Fragment Shader:</p>
+
+<p class="code">varying vec2 v_vTexcoord;<br>
+varying vec4 v_vColour;<br>
+<br>
+uniform vec4 gm_SpineTintBlackColour; // This is the uniform
+containing the tint-black colour<br>
+<br>
+void main()<br>
+{<br>
+vec4 tb = gm_SpineTintBlackColour;<br>
+vec4 texcol = texture2D( gm_BaseTexture, v_vTexcoord );<br>
+vec4 outcol;<br>
+outcol.rgb = v_vColour.rgb * texcol.rgb;<br>
+outcol.rgb += tb.rgb * ((tb.a * (texcol.a - 1.0)) + (1.0 -
+texcol.rgb)); // This line performs the tint-black blending
+logic<br>
+outcol.a = v_vColour.a * texcol.a;<br>
+gl_FragColor = outcol;<br>
+}<br></p>
+
+<p><br>
+You would use this by first calling the shader, then drawing the
+sprite, then resetting the shader, something like this:</p>
+
+<p class="code">shader_set(shd_spine_tint_black);<br>
+draw_self();<br>
+shader_reset();<br></p>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href=
+"../index.html">Sprites</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

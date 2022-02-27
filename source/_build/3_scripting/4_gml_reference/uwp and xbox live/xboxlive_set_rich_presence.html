@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>xboxlive_set_rich_presence</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/uwp and xbox live/xboxlive_set_rich_presence.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox%20live%2Fxboxlive_set_rich_presence.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox%20live%2Fxboxlive_set_rich_presence.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>xboxlive_set_rich_presence</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will set the rich presence string for the given
+user. A Rich Presence string shows a user's in-game activity after
+the name of the game that the user is playing, separated by a
+hyphen. This string is displayed under a player's Gamertag in the
+"Friends &amp; Clubs" list as well as in the player's Xbox Live
+user profile.</p>
+
+<p>When using this function you need to supply the User ID pointer
+for the user, and then you can flag the user as currently active in
+the game or not (using <tt>true</tt>/<tt>false</tt>). If set to
+<tt>false</tt>, then the rich presence string will be appended with
+"/afk" or something appropriate. The next argument is the rich
+presence string ID to show, and then finally you can (optionally)
+supply a <tt>service_config_id</tt> string. Note that this is an
+optional argument since if you have called <a href=
+"xboxlive_stats_setup.html"><tt>xboxlive_stats_setup()</tt></a> you
+don't need to pass the <tt>service_config_id</tt> here.</p>
+
+<p>For more information on rich presence and how to set up the
+strings to use in the partner center, please see the following
+Microsoft documentation:</p>
+
+<ul>
+<li><a href=
+"https://docs.microsoft.com/en-us/gaming/xbox-live/features/social/rich-presence/"
+target="_blank">Overview Of Presence Strings</a>
+</li>
+</ul>
+
+<div class="note"><b>IMPORTANT!</b> This function is only valid
+when exporting using the UWP target for the Xbox One and it
+requires you to have checked the <b>Enable XBox Live</b> option in
+the <a href=
+"../../../2_interface/3_settings/game_options/options_windowsuwp.html">
+UWP Game Options</a>.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
+
+<p class="code">xboxlive_set_rich_presence(user_id, is_user_active,
+rich_presence_string, [service_config_id])</p>
+
+<blockquote>
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>user_id</td>
+<td>The ID pointer of the user to check.</td>
+</tr>
+
+<tr>
+<td>is_user_active</td>
+<td>Flag the user as active or not.</td>
+</tr>
+
+<tr>
+<td>rich_presence_string</td>
+<td>The rich presence string ID to use (as defined in the Partner
+Center - max 50 characters)</td>
+</tr>
+
+<tr>
+<td>service_config_id</td>
+<td>[OPTIONAL] This is the config_id string for the game.</td>
+</tr>
+</table>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
+
+<p class="code">var pad_uid = xboxlive_user_for_pad(0);<br>
+xboxlive_set_rich_presence(pad_uid, true,
+"Playing_Challenge");<br></p>
+
+<blockquote>
+<p>The above code gets the user ID pointer for the user assigned to
+the gamepad [0] slot, and then sets the rich presence string for
+that user.</p>
+</blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">UWP and XBox
+Live</a></div>
+
+<div style="float:right">Next: <a href=
+"xboxlive_gamedisplayname_for_user.html">xboxlive_gamedisplayname_for_user</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2019 All Rights Reserved</h5>
+</div>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>
